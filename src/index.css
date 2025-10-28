@@ -1,0 +1,76 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --radius: 0.5rem;
+    
+    /* Paleta "Pastel Dreams" - variables CSS */
+    --background: 35 30% 98%; /* Crema cálido */
+    --foreground: 348 25% 40%; /* Marrón principal */
+    
+    --primary: 354 100% 85%; /* Rosa pastel */
+    --primary-foreground: 348 25% 40%;
+    
+    --secondary: 210 100% 85%; /* Celeste suave */
+    --secondary-foreground: 210 50% 35%;
+    
+    --accent: 45 100% 85%; /* Amarillo suave */
+    --accent-foreground: 45 30% 45%;
+    
+    --muted: 35 30% 98%; /* Crema cálido */
+    --muted-foreground: 348 25% 60%;
+    
+    --card: 0 0% 100%;
+    --card-foreground: 348 25% 40%;
+    
+    --popover: 0 0% 100%;
+    --popover-foreground: 348 25% 40%;
+    
+    --border: 348 20% 90%;
+    --input: 348 20% 90%;
+    --ring: 354 100% 85%;
+    
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 20% 98%;
+  }
+
+  * {
+    border-color: hsl(var(--border));
+  }
+
+  body {
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+    font-family: 'Quicksand', sans-serif;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  .glass-effect {
+    @apply backdrop-blur-md bg-white/80 border border-white/20 shadow-lg;
+  }
+  
+  .gradient-pastel {
+    background: linear-gradient(135deg, #FFB3BA 0%, #B3D9FF 50%, #FFE5B3 100%);
+  }
+  
+  .text-gradient {
+    @apply bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent;
+  }
+}
+
+
+
+img {
+  object-position: top;
+}
+
+.fixed {
+  position: fixed;
+}
